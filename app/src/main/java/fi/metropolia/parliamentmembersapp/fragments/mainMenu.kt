@@ -1,35 +1,28 @@
 package fi.metropolia.parliamentmembersapp.fragments
-
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
+import com.squareup.picasso.Picasso
 import fi.metropolia.parliamentmembersapp.R
 
+import fi.metropolia.parliamentmembersapp.databinding.FragmentMainMenuBinding
 
-/**
- * A simple [Fragment] subclass.
- * Use the [mainMenu.newInstance] factory method to
- * create an instance of this fragment.
- */
 class mainMenu : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
+    private lateinit var binding : FragmentMainMenuBinding
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main_menu, container, false)
+        binding = DataBindingUtil.inflate<FragmentMainMenuBinding>(inflater, R.layout.fragment_main_menu,container,false)
+
+        Picasso.get().load("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Logo_of_the_Parliament_of_Finland.svg/2880px-Logo_of_the_Parliament_of_Finland.svg.png").into(binding.imageView)
+
+
+        return binding.root
     }
-
-
 }

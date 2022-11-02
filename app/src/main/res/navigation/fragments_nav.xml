@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainMenu"
-        android:name="fi.metropolia.parliamentmembersapp.mainMenu"
+        android:name="fi.metropolia.parliamentmembersapp.fragments.mainMenu"
         android:label="fragment_main_menu"
         tools:layout="@layout/fragment_main_menu" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/partyList"
-        android:name="fi.metropolia.parliamentmembersapp.partyList"
+        android:name="fi.metropolia.parliamentmembersapp.fragments.partyList"
         android:label="fragment_party_list"
         tools:layout="@layout/fragment_party_list" >
         <action
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/membersList"
-        android:name="fi.metropolia.parliamentmembersapp.membersList"
+        android:name="fi.metropolia.parliamentmembersapp.fragments.membersList"
         android:label="fragment_members_list"
         tools:layout="@layout/fragment_members_list" >
         <action
@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/partyMembersList"
-        android:name="fi.metropolia.parliamentmembersapp.partyMembersList"
+        android:name="fi.metropolia.parliamentmembersapp.fragments.partyMembersList"
         android:label="fragment_party_members_list"
         tools:layout="@layout/fragment_party_members_list" >
         <action
@@ -52,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/membersInformation"
-        android:name="fi.metropolia.parliamentmembersapp.membersInformation"
+        android:name="fi.metropolia.parliamentmembersapp.fragments.membersInformation"
         android:label="fragment_members_information"
         tools:layout="@layout/fragment_members_information" >
         <action
@@ -67,7 +67,7 @@
     </fragment>
     <fragment
         android:id="@+id/memberFeedback"
-        android:name="fi.metropolia.parliamentmembersapp.memberFeedback"
+        android:name="fi.metropolia.parliamentmembersapp.fragments.memberFeedback"
         android:label="fragment_member_feedback"
         tools:layout="@layout/fragment_member_feedback" >
         <action

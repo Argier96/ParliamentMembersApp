@@ -2,4 +2,9 @@
     <string name="app_name">ParliamentMembersApp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="blank"></string>
+    <string name="Finland">   Parliament of the Republic of Finland</string>
+    <string name= "listOfMembers">List of Members of Parliament</string>
+    <string name="lP">List by Parties</string>
+    <string name="lM">List All Members</string>
 </resources>
