@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragments_nav"
+    app:startDestination="@id/mainMenu">
+
+    <fragment
+        android:id="@+id/mainMenu"
+        android:name="fi.metropolia.parliamentmembersapp.mainMenu"
+        android:label="fragment_main_menu"
+        tools:layout="@layout/fragment_main_menu" >
+        <action
+            android:id="@+id/action_mainMenu_to_membersList"
+            app:destination="@id/membersList" />
+        <action
+            android:id="@+id/action_mainMenu_to_partyList"
+            app:destination="@id/partyList" />
+    </fragment>
+    <fragment
+        android:id="@+id/partyList"
+        android:name="fi.metropolia.parliamentmembersapp.partyList"
+        android:label="fragment_party_list"
+        tools:layout="@layout/fragment_party_list" >
+        <action
+            android:id="@+id/action_partyList_to_partyMembersList"
+            app:destination="@id/partyMembersList" />
+        <action
+            android:id="@+id/action_partyList_to_mainMenu"
+            app:destination="@id/mainMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/membersList"
+        android:name="fi.metropolia.parliamentmembersapp.membersList"
+        android:label="fragment_members_list"
+        tools:layout="@layout/fragment_members_list" >
+        <action
+            android:id="@+id/action_membersList_to_mainMenu"
+            app:destination="@id/mainMenu" />
+        <action
+            android:id="@+id/action_membersList_to_membersInformation"
+            app:destination="@id/membersInformation" />
+    </fragment>
+    <fragment
+        android:id="@+id/partyMembersList"
+        android:name="fi.metropolia.parliamentmembersapp.partyMembersList"
+        android:label="fragment_party_members_list"
+        tools:layout="@layout/fragment_party_members_list" >
+        <action
+            android:id="@+id/action_partyMembersList_to_membersInformation"
+            app:destination="@id/membersInformation" />
+    </fragment>
+    <fragment
+        android:id="@+id/membersInformation"
+        android:name="fi.metropolia.parliamentmembersapp.membersInformation"
+        android:label="fragment_members_information"
+        tools:layout="@layout/fragment_members_information" >
+        <action
+            android:id="@+id/action_membersInformation_to_membersList"
+            app:destination="@id/membersList" />
+        <action
+            android:id="@+id/action_membersInformation_to_partyMembersList"
+            app:destination="@id/partyMembersList" />
+        <action
+            android:id="@+id/action_membersInformation_to_memberFeedback"
+            app:destination="@id/memberFeedback" />
+    </fragment>
+    <fragment
+        android:id="@+id/memberFeedback"
+        android:name="fi.metropolia.parliamentmembersapp.memberFeedback"
+        android:label="fragment_member_feedback"
+        tools:layout="@layout/fragment_member_feedback" >
+        <action
+            android:id="@+id/action_memberFeedback_to_membersInformation"
+            app:destination="@id/membersInformation" />
+    </fragment>
+</navigation>
